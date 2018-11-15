@@ -17,6 +17,8 @@
 Character::Character()
 {
     name = "NO NAME";
+    next = nullptr;
+    prev = nullptr;
 }
 
 Character::~Character()
@@ -47,4 +49,24 @@ std::string Character::getName()
 int Character::getArmor()
 {
     return armor;
+}
+
+Character* Character::getNext()
+{
+    return next;
+}
+
+void Character::setNext(Character* n)
+{
+    next = n;
+}
+
+Character* Character::getPrev()
+{
+    return prev;
+}
+
+void Character::setPrev(Character* p)
+{
+    prev = p;
 }
